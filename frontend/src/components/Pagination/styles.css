@@ -1,0 +1,47 @@
+.movie-pagina-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.movie-pagina-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px auto;
+}
+
+.movie-pagina-box form{
+    width: 100%;
+    display: flex;
+}
+.movie-pagina-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+}
+.movie-pagina-button svg{
+    filter: brightness(0) saturate(100%) invert(26%) sepia(20%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
+}
+.movie-pagina-button :disabled{
+    border:1px solid #c2c2c2;
+    cursor: unset;
+}
+.movie-pagina-button:disabled svg{
+    filter: none;
+}
+
+.movie-pagina-container p{
+    margin:0;
+    font-size: 12px;
+    color: var(--color-primary);
+}
+.movie-flip-horizon{
+    transform: rotate(180deg);
+}

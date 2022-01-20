@@ -1,4 +1,4 @@
-import {ReactComponent as GhIcon} from 'assets/img/github1.svg';
+import {ReactComponent as GhIcon} from 'assets/img/github.svg';
 import './style.css';
 function Navbar(){
     return(
