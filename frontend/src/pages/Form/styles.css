@@ -1,0 +1,28 @@
+.movie-form-container{
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.movie-form{
+    width: calc(100%-20px);
+}
+
+.movie-grupo-form{
+    margin-bottom: 20px;
+}
+
+.movie-grupo-form label{
+    font-size: 12px;
+    color: lightslategray;
+}
+
+.movie-form-btn-container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.movie-btn{
+    display: flex;
+    margin:auto;
+}
