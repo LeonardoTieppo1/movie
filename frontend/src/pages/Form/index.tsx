@@ -1,4 +1,5 @@
 //quando for colocar uma expressão do javascript no react jsx tem que ser colocada entre {}
+//página de formulário do site criado para ter o preenchimento da avaliação do usuário
 import './styles.css';
 function Form() {
     const movie = {
@@ -17,10 +18,12 @@ function Form() {
                 <form className="movie-form">
                     <div className="grupo-form movie-grupo-form">
                         <label htmlFor="email">Informe seu email</label>
+                        <br/>
                         <input type="email" className="controle-form" id="email" />
                     </div>
                     <div className="grupo-form movie-grupo-form">
                         <label htmlFor="score">Informe a sua avaliação</label>
+                        <br/>
                         <select className="controle-form" id="score">
                             <option>1</option>
                             <option>2</option>

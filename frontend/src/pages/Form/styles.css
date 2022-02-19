@@ -1,28 +1,45 @@
-.movie-form-container{
-    max-width: 480px;
+/*estilização da página de formulários*/
+
+.movie-form-container {
+    max-width: auto;
     margin: 40px auto;
     padding: 20px;
+    justify-content: center;
+    text-align: center;
 }
 
-.movie-form{
+.movie-image-poster {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.movie-poster-bottom-container {
+    margin-top: 5px;
+    font-size: 1.50rem;
+    text-align: center;
+}
+
+.movie-form {
     width: calc(100%-20px);
 }
 
-.movie-grupo-form{
+.movie-grupo-form {
     margin-bottom: 20px;
 }
 
-.movie-grupo-form label{
-    font-size: 12px;
+.movie-grupo-form label {
+    font-size: 15px;
     color: lightslategray;
 }
 
-.movie-form-btn-container{
+.movie-form-btn-container {
     display: flex;
     justify-content: center;
-    margin: auto;
+    align-items: center;
 }
-.movie-btn{
+
+.movie-btn {
     display: flex;
-    margin:auto;
+    margin: auto;
 }

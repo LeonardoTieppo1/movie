@@ -7,7 +7,7 @@
 //depois colocar o componentes Routes, configura rota por rota, no caso a rota(Route) no caminho(path) raiz("/") tem que abrir a página de listing
 //na rota(Route) do camiho(path) do formulario("/form"), no caso apresenta uma subrota passando um parametro que vai ser o id do filme  
 import{BrowserRouter,Routes,Route} from 'react-router-dom';
-import Listing from 'pages/Listing';
+import Listing from 'pages/Listing';//criar uma rota de página
 import Form from 'pages/Form';
 import Navbar from "./components/Navbar";
 

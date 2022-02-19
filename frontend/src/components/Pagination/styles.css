@@ -4,11 +4,11 @@
     align-items: center;
     padding: 15px;
 }
-.movie-pagina-box{
-    display: flex;
+.movie-pagina-box{    
+    display: flex;    
     justify-content: space-between;
     align-items: center;
-    padding: 15px auto;
+    padding: 15px;
 }
 
 .movie-pagina-box form{
@@ -24,7 +24,8 @@
     justify-content: center;
     align-items: center;
     border: 1px solid var(--color-primary);
-    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .movie-pagina-button svg{
     filter: brightness(0) saturate(100%) invert(26%) sepia(20%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
