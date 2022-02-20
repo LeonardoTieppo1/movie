@@ -17,7 +17,8 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-	/*Codigo de segurança*/
+	/*Codigo de segurança onde libera o back-end que esta hospedado em um servidor possa ser acessado pelo front-end que está em outro servidor
+	 * */
 	@Autowired
 	private Environment env;
 	@Override
@@ -27,14 +28,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		}
 		http.cors().and().csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.authorizeHttpRequests().anyRequest().permitAll();
+		http.authorizeRequests().anyRequest().permitAll();
 	}
+	
 	@Bean
 	CorsConfigurationSource corsConfigurationSource() {
-		CorsConfiguration config= new CorsConfiguration().applyPermitDefaultValues();
-		config.setAllowedMethods(Arrays.asList("POST","GET","PUT","DELETE","OPTIONS"));
+		CorsConfiguration configuration= new CorsConfiguration().applyPermitDefaultValues();
+		configuration.setAllowedMethods(Arrays.asList("POST","GET","PUT","DELETE","OPTIONS"));
 		final UrlBasedCorsConfigurationSource source=new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", config);
+		source.registerCorsConfiguration("/**", configuration);
 		return source;
 	}
 }
