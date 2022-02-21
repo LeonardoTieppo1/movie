@@ -1,9 +1,13 @@
 package com.devsuperior.movie.enti;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +34,12 @@ public class Movie {
 	private	Double  score;
 	private Integer count;
 	private String  image;
+	
+	
+	@OneToMany(mappedBy = "id.movie")
+	private Set<Score> scores= new HashSet<>();//no java a coleção Set é uma interface, não posso instanciar um new Set e sim uma classe que implementa interface
+	//para mapear a lista no modelo de dados, de quem seria da classe Movie a coleção de scores usa o @OneToMany colocar atributo(mappedBy="id.movie") pois o id é o nome da chamada do score e o movie como nome do atributo, com isso consegue acessar todas as avaliações do filme a partir do objeto Movie
+	
 	
 	public Movie() {
 	}
@@ -81,6 +91,13 @@ public class Movie {
 	public void setImage(String image) {
 		this.image = image;
 	}
+
+	public Set<Score> getScores() {
+		return scores;
+	}//método para acessar a coleção de score com dado filme
+
+	
+	
 	
 	
 }

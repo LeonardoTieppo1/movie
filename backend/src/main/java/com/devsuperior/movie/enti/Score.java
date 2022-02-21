@@ -9,10 +9,12 @@ import javax.persistence.Table;
 @Table(name="tb_score")
 public class Score {
 	
-	/*No caso como tem uma chave composta então será usado o @EmbededdedId*/
-	@EmbeddedId
+	/*No caso como tem uma chave composta então será usado o @EmbededdedId*/	
 	/*quando faz uma chave composta tem que colocar =new ConstructorName();*/
+
+	@EmbeddedId
 	private ScorePK id=new ScorePK();
+	
 	private Double value;
 	
 	public Score() {
