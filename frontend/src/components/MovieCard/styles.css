@@ -1,4 +1,9 @@
 .movie-image-poster {
     margin-top: 1em;
     border-radius: 1em;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    width: 15em;
 }
