@@ -5,7 +5,7 @@ import { Movie, MoviePage } from 'types/movie';
 import { BASE_URL } from 'utils/requests';
 import './styles.css'; 
 
-type Prop={
+type Props={
         movieId:string;
     }
 
@@ -25,7 +25,9 @@ type Prop={
     //Atenção coloque o movieId como lista de objeto do useEffect, o argumento do movieId que chegou do props
     //vai vir como dependencia do useEffect, pois senão colocar a requisição seria feita inumeras vezes pois foi usado o movieId
     //e deve informar que vai ser feita a requisição somente uma vez e será feita novamente caso o valor do id mudar 
-    function FormCard({movieId}:Prop) {
+    //depois salva no github, depois vai para o movieStars
+
+    function FormCard({movieId}:Props) {
      
 
         const[movie,setMovie]=useState<Movie>();

@@ -17,9 +17,9 @@ function Poster({movie}:Props){
     return(
         <div>
             <img className="movie-image-poster" src={movie.image} alt={movie.title} />
-            <div className="movie-poster-bottom-container">
+            <div className="movie-poster-btm-container">
                 <h3>{movie.title}</h3>
-                <MovieScore/>
+                <MovieScore count={movie.count} score={movie.score}/>
 
                 <Link to={`/form/${movie.id}`}>
                     <div className="btn btn-primary movie-btn mt-3">Avaliar</div>
