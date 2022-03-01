@@ -6,6 +6,8 @@ import './styles.css';
 //usando um operador condicional ternário onde verifica se o score for menor que 0 exibe um -, mas caso o score seja maior que 0 então exibe o valor fixo com 1 casa decimal
 
 //criar valores para avaliação e para as estrelas, no caso um props com os dois valores
+//e com isso colocar na função para receber esses dois valores
+// no Stars foi criada uma função de exibição das etrelas, com isso ela vai receber o score
 
 type Props={
     score: number;

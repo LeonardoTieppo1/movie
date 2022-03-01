@@ -8,6 +8,8 @@ import { Movie } from "types/movie";
 // então para indicar na função tem que colocar um {objeto desestruturado} pois foi indicado um objeto, para pegar o objeto deve indicar {nomeObjeto}:Props e indicar o tipo dele     
 //apaga o que estiver alocado de forma local pois como é o mesmo nome o sistema vai manter, o componente ficará pronto para funcionar com o objeto só que vai ser com o objeto que vai chegar de argumento
 //agora o componente MovieCard ele recebe como argumento o prop que é o objeto e vai fazer a renderização do componente com o argumento 
+//foi criado uma função dentro do MovieScore onde a função vai receber como argumento o movie.count e o movie.score
+
 type Props={
     movie:Movie;
 }

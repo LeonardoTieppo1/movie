@@ -88,10 +88,20 @@ function Listing() {
     //se quiser que os dados sigam a mesma ordem para não ter risco do backend buscar os filmes em ordem diferente dependendo de como atualizar o filme
     //pode colocar antes da crase um outro parametro de ordenação, como um &sort=id, com isso garanto que a busca dos filmes sempre estaram na ordem
     //outra forma é ordenar por titulo, title, ae vai sempre ordenar de acordo com o titulo do filme 
+
+    //colocar no Pagination um argumento de page e ir para o Pagination
+    //criar uma função para  ativar a animação dos botões de pagina, crie uma variavel com uma função lambda
+    // onde coloca um (newPageNumber:number) =>{setPageNumber(newPageNumber);}
+    //passar para o Pagination
+
+    const hardlePageChange=(newPageNumber :number)=>{
+        setPageNumber(newPageNumber);
+    }
+
    return (
         <>
 
-            <Pagination />
+            <Pagination page={page} onChange={hardlePageChange} />
             <div className="container">
                 <div className="row">
                     {page.content.map(movie =>(
