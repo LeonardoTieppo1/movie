@@ -12,16 +12,23 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1em;
     border-radius: 1em;
-    width: 12em;
     height: 300px;
 }
 
 .movie-poster-bottom-container {
-    margin-top: 5px;
-    font-size: 1.50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.movie-poster-bottom-container h3 {
     text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 5px;
+    min-height: 30px;
 }
 
 .movie-form {
@@ -49,10 +56,15 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
-    height: 30px;
+    align-items: center;
     justify-content: center;
-    width: 100px;
-    padding-bottom: 30px;
-    flex-direction: row;
+    background-color: blue;
+    font-size: 15px;
+    font-weight: 400;
+    height: 40px;
+    width: 125px;
+}
+
+select#score.controle-form {
+    width: 50px;
 }

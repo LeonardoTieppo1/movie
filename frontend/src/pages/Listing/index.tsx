@@ -19,6 +19,7 @@ function Listing() {
     //e o segundo é uma função que altera o estado, no caso será o setNomeEstado
     //com isso vai receber o useState(valorInicial), tambem é uma boa pratica iniciar com um valor inicial, exemplo qual o numero inicial da página  
     const [pageNumber, setPageNumber]=useState(0);
+
    //criar o useEffect() onde vai receber dois argumentos, uma função que vai ser executada,e uma lista de objetos que vai observar
    //ou seja, sempre que alterar algo dos objetos aqui ele vai executar novamente, se deixar a lista vazia ele só executa quando o componente for carregado
    //no lugar de colocar o axios solto vai ser colocado dentro do useEffects, e agora tem o useEffect que vai executar a função axios definida somente na hora que carregar o componente
@@ -30,7 +31,7 @@ function Listing() {
         last: true,
         totalPages: 0,
         totalElements: 0,
-        size: 10,
+        size: 12,
         number: 0,
         first: true,
         numberOfElements: 0,
@@ -38,7 +39,7 @@ function Listing() {
     });
     
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
         .then(response => {
             const data=response.data as MoviePage;
             setPage(data);
@@ -84,7 +85,9 @@ function Listing() {
     //IMPORTANTE: em uma renderização dinâmica de coleção, no caso de filmes, cada elemento rendezidado DEVE possuir um atributo key sendo uma exigência do React
     //onde ele faz um processamento interno de coleções renderizadas e precisa do atributo key e tem que ser um valor unico para cada atributo
     //no caso será o id do movie, no div do className deve colocar o key={informar a chave utilizada }  
-
+    //se quiser que os dados sigam a mesma ordem para não ter risco do backend buscar os filmes em ordem diferente dependendo de como atualizar o filme
+    //pode colocar antes da crase um outro parametro de ordenação, como um &sort=id, com isso garanto que a busca dos filmes sempre estaram na ordem
+    //outra forma é ordenar por titulo, title, ae vai sempre ordenar de acordo com o titulo do filme 
    return (
         <>
 
