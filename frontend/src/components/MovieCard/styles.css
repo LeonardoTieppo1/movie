@@ -6,3 +6,15 @@
     margin-right: auto;
     width: 15em;
 }
+
+.btn btn-primary movie-btn mt-3 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+h3 {
+    font-size: 5px;
+    font-weight: bold;
+}

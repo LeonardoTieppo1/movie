@@ -5,14 +5,14 @@
 }
 
 .movie-score-valor {
-    margin: 0;
+    margin: auto;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: orange;
 }
 
 .movie-score-count {
-    font-size: 20px;
+    font-size: 15px;
     color: lightslategray;
-    margin: 5px 0 5px 0;
+    margin: 5px 0px 5px 0px;
 }

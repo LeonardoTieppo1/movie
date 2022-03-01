@@ -1,13 +1,18 @@
 import MovieScore from "components/MovieScore";
 import './styles.css';
-function Poster(){
-    const movie = {
-    id: 1,
-    image: "https://i.pinimg.com/564x/09/6e/e6/096ee672b082cab9358bffceec2b0744.jpg",
-    title: "The Witcher",
-    count: 2,
-    score: 4.5
-};
+import {Link} from "react-router-dom";
+import { type } from "os";
+import { Movie } from "types/movie";
+//criar um tipo(type) interno, não exporte pois ele existirá somente dentro do arquivo, e será chamado de Props
+// e informar que ele pode ter vários dados, no caso somente os dados do Movie serão utilizados, esse é o tipo de dados que a função vai receber
+// então para indicar na função tem que colocar um {objeto desestruturado} pois foi indicado um objeto, para pegar o objeto deve indicar {nomeObjeto}:Props e indicar o tipo dele     
+//apaga o que estiver alocado de forma local pois como é o mesmo nome o sistema vai manter, o componente ficará pronto para funcionar com o objeto só que vai ser com o objeto que vai chegar de argumento
+//agora o componente MovieCard ele recebe como argumento o prop que é o objeto e vai fazer a renderização do componente com o argumento 
+type Props={
+    movie:Movie;
+}
+
+function Poster({movie}:Props){
 
     return(
         <div>
@@ -15,7 +20,10 @@ function Poster(){
             <div className="movie-poster-bottom-container">
                 <h3>{movie.title}</h3>
                 <MovieScore/>
-                <button className="btn btn-primary movie-btn mt-3">Avaliar</button>
+
+                <Link to={`/form/${movie.id}`}>
+                    <div className="btn btn-primary movie-btn mt-3">Avaliar</div>
+                </Link>
             </div>
         </div>
     );
