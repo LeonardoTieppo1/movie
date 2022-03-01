@@ -4,6 +4,5 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap;
     width: 15em;
 }
