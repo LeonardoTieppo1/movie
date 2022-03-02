@@ -1,7 +1,6 @@
 import MovieScore from "components/MovieScore";
 import './styles.css';
 import {Link} from "react-router-dom";
-import { type } from "os";
 import { Movie } from "types/movie";
 //criar um tipo(type) interno, não exporte pois ele existirá somente dentro do arquivo, e será chamado de Props
 // e informar que ele pode ter vários dados, no caso somente os dados do Movie serão utilizados, esse é o tipo de dados que a função vai receber

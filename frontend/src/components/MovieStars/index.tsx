@@ -2,7 +2,6 @@ import{ReactComponent as StarFull} from 'assets/img/starF.svg';
 import{ReactComponent as StarHalf} from 'assets/img/starH.svg';
 import{ReactComponent as StarEmpty} from 'assets/img/starE.svg';
 import './styles.css';
-import Score from 'components/MovieScore';
 //criação das estrelas para a avaliação do filme
 //no caso será estático
 
@@ -32,13 +31,13 @@ import Score from 'components/MovieScore';
             fazendo um if e else de 1,0.5,0
 
             */
-            type Props={
-                score:number;
-            };
+type Props={
+    score:number;
+};
 
-            type StarProps={
-                fill:number;
-            }
+type StarProps={
+    fill:number;
+}
 
             function getFills(score:number){
                 const fills=[0,0,0,0,0];
